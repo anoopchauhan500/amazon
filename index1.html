@@ -3,77 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form submit</title>
+    <title>Form Submit</title>
    <style>
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
     display: flex;
     justify-content: center;  /* Center horizontally */
     align-items: center;      /* Center vertically */
     height: 100vh;            /* Full height of viewport */
-    margin: 0;
-    background-color: #f8f9fa; /* Optional: light background */
+    padding: 20px;
 }
 #myForm {
-    width: 150%; /* Adjust width as needed */
-    padding: 20px;
-    background: white;
-    border-radius: 9px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #ffffff; /* White background for the form */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px; /* Limiting max width for better readability */
     text-align: center;
+    box-sizing: border-box;
+    border: 2px solid #ff7e5f; /* Border color to match the gradient */
+}
+h1 {
+    color: #ff7e5f; /* Vibrant coral color for the title */
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
 }
 label {
     display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8em;
-    padding-top: 15px;
+    color: #6c757d; /* Light gray for label text */
+    font-size: 1em;
+    margin-bottom: 8px;
+    text-align: left; /* Left-align the labels */
+    font-weight: 600;
 }
-#myForm input,
+input[type="text"], 
+input[type="email"], 
 textarea {
     width: 100%;
-    padding: 10px;
-
-}
-
-label {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.9em;
-}
-
-input[type="submit"] {
-    background-color: black;
-    color: white;
-    text-transform: capitalize;
-    font-size: 1.2em;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd; /* Light gray border for inputs */
     border-radius: 10px;
+    font-size: 1em;
+    background-color: #f0f8ff; /* Light blue background for the input fields */
+    color: #495057; /* Text color */
+    transition: border-color 0.3s ease-in-out;
 }
-</style>
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+textarea:focus {
+    border-color: #ff7e5f; /* Coral color on focus */
+    outline: none;
+}
+textarea {
+    height: 120px; /* Adjust height of the textarea */
+    resize: vertical; /* Allow vertical resizing only */
+}
+input[type="submit"] {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background for button */
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Hover effect with gradient flip */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+input[type="submit"]:active {
+    background: #ff7e5f; /* Solid coral when the button is clicked */
+    transform: scale(1); /* Reset size */
+}
+@media (max-width: 600px) {
+    #myForm {
+        width: 90%; /* Adjust form width on smaller screens */
+    }
+}
+   </style>
 </head>
 <body>
     <div>
         <form id="myForm" action="">
-            <h1>send message</h1>
+            <h1>LET US KNOW UR RESPONSE!</h1>
             <div>
-                <label for="name" >Name:</label>
-                <input type="text" id="name" placeholder="Enter Your Name">
-                
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter Your Name" required>
             </div>
             <div>
                 <label for="email">Email:</label>
-                <input type="email" id="email" placeholder="Please enter valid email">
-                
+                <input type="email" id="email" placeholder="Enter a valid email" required>
             </div>
             <div>
                 <label for="message">Message:</label>
-                <textarea id="message"></textarea>
-                
+                <textarea id="message" placeholder="Your message here..." required></textarea>
             </div>
-            <input type="submit" value="send message" placeholder="Enter the massage">
+            <input type="submit" value="SEND FEEDBACK">
         </form>
     </div>
     <script src="app1.js"></script>
-    
 </body>
 </html>
