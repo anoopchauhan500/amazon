@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form submit</title>
+   <style>
+* {
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 100vh;            /* Full height of viewport */
+    margin: 0;
+    background-color: #f8f9fa; /* Optional: light background */
+}
+#myForm {
+    width: 150%; /* Adjust width as needed */
+    padding: 20px;
+    background: white;
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+label {
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    padding-top: 15px;
+}
+#myForm input,
+textarea {
+    width: 100%;
+    padding: 10px;
+
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    text-transform: capitalize;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+</style>
+</head>
+<body>
+    <div>
+        <form id="myForm" action="">
+            <h1>send message</h1>
+            <div>
+                <label for="name" >Name:</label>
+                <input type="text" id="name" placeholder="Enter Your Name">
+                
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Please enter valid email">
+                
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message"></textarea>
+                
+            </div>
+            <input type="submit" value="send message" placeholder="Enter the massage">
+        </form>
+    </div>
+    <script src="app1.js"></script>
+    
+</body>
+</html>
